@@ -18,7 +18,7 @@ The starting point for the code in 'https-nomad-vault-simulations' was copied fr
 
     tls-certificates\03-https-client\server
 
-I have then adapted it to simulate various Nomad and Vault endpoints for testing a CI deployer.
+I have then adapted it to simulate various https Nomad and Vault endpoints for testing a CI deployer.
 
 To run my Nomad/Vault mock, simply cd into: https-nomad-vault-simulations
 
@@ -26,6 +26,10 @@ and run with:
 
     go run server.go
 
+My code references the certificates from the other peoples work with these lines:
+
+	CertPath string = "../tls-certificates/00-certificates/server/cert.pem"
+	KeyPath  string = "../tls-certificates/00-certificates/server/key.pem"
 
 NOTE:
 My code simply uses the authors original certificates that have been pulled from github and these
